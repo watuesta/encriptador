@@ -28,6 +28,22 @@ body{
     justify-content: center;
 }
 
+.resultado{
+    margin: 0 auto;
+    margin-top: -130% !important;
+}
+.resultado textarea{
+    font-family: "Inter", sans-serif;
+    font-size: larger;
+    font-weight: 400;
+    margin: 1em;
+    color: #0A3871;
+    border: none;
+    background: none;
+    padding: 0.3em;
+    height: auto;
+}
+
 .imagen-muneco{
     margin: 0 auto;
     width: 200px;
@@ -35,6 +51,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
 }
 
 .imagen-muneco img{
@@ -46,6 +63,7 @@ body{
     margin: 0 auto;
     width: auto;
     height: auto;
+    display: none;
 }
 
 .parrafo h1{
@@ -90,7 +108,7 @@ body{
     border: none;
     background: none;
     padding: 0.3em;
-    height: auto;
+    height: auto; 
 }
 
 .texto textarea::placeholder{
