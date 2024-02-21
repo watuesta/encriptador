@@ -1,4 +1,3 @@
-/* Js */
 let mensaje = document.querySelector("#texto-encriptado");
 
 function btnEncriptar(){
