@@ -7,38 +7,48 @@ body{
 
 .contenedor-logo{
     margin-top: 1em;
+    position: absolute;
+    flex-flow: column;
+}
+
+.contenedor-logo h1 img{
+    display: block;
 }
 
 .derecha{
     background-color: white;
-    width: 350px;
-    height: 944px;
+    width: 300px;
+    height: 700px;
     float: right;
-    margin: 2em;
+    margin: 1.5em;
     border-radius: 1em;
     display: flex;
     flex-direction: column;
     background: white;
+    justify-content: center;
 }
 
 .imagen-muneco{
     margin: 0 auto;
-    width: 250px;
-    height: 304px;
-    margin-top: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.imagen-muneco>img{
-    width: 250px;
+.imagen-muneco img{
+    width: 180px;
+    padding: 1em;
 }
 
 .parrafo{
     margin: 0 auto;
-    width: 336px;
-    height: 122px;
+    width: auto;
+    height: auto;
 }
 
-.parrafo>h1{
+.parrafo h1{
     text-align: center;
     padding: 1em;
     margin: 0 auto;
@@ -46,19 +56,19 @@ body{
     font-weight: 700;
     color: #343A40;
 }
-.parrafo>p{
+.parrafo p{
     text-align: center;
     padding: 1em;
     margin: 0 auto;
-    font-weight: 400;
-    color:#495057;
-    ;
+    font-weight: 200;
+    color:#5b6167;
+    font-size: 14px;
 }
 
 .principal{
     float: left;
     display: block;
-    height: 900px;
+    height: 650px;
     width: 577px;
     margin-left: 10%;
     margin-top: 5%;
@@ -70,7 +80,7 @@ body{
     height: 800px;
 }
 
-.texto>input{
+.texto input{
     font-size: larger;
     font-weight: 400;
     line-height: 48px;
@@ -80,15 +90,40 @@ body{
 }
 
 .botones{
-    background-color: aliceblue;
+    color: white;
+    display: flex;
 }
 
-.botones>button{
-    float: left;
-    width: 45%;
-    padding: 1em;
-    margin: 1em;
-    border-radius: 1em;
-    color: rgb(31, 76, 153);
+.boton-encriptar {
+    color: white;
+    border-radius: 16px;
+    background: #0A3871;
+    padding: 12px 18px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    margin: 1rem;
+
+}
+
+.boton-encriptar:hover{
+    background: #062750;
+}
+
+.boton-desencriptar{
+    color: #0A3871;
+    border-radius: 16px;
+    background: #D8DFE8;
+    padding: 12px 18px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid #0A3871;
+    margin: 1rem;
+}
+
+.boton-desencriptar:hover{
+    cursor: pointer;
 }
 
