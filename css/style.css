@@ -77,16 +77,26 @@ body{
 }
 
 .texto{
-    height: 800px;
+    height: auto;
+    width: auto;
 }
 
-.texto input{
+.texto textarea{
+    font-family: "Inter", sans-serif;
     font-size: larger;
     font-weight: 400;
-    line-height: 48px;
-    width: 90%;
     margin: 1em;
     color: #0A3871;
+    border: none;
+    background: none;
+    padding: 0.3em;
+    height: auto;
+}
+
+.texto textarea::placeholder{
+    color: #062750;
+    font-family: "Inter", sans-serif;
+    padding-left: 0.1em;
 }
 
 .botones{
