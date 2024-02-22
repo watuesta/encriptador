@@ -4,11 +4,11 @@ let imgSearch = document.querySelector('.imagen-muneco');
 let parrafoError = document.querySelector( '.parrafo');
 
 let matriz_clave = [
-    ["a", "#/("],
-    ["e", "?)|"],
-    ["i", "!¿¡"],
-    ["o", "@=+"],
-    ["u", "*%$"],
+    ["e", "enter"],
+    ["i", "imes"],
+    ["a", "ai"],
+    ["o", "ober"],
+    ["u", "ufat"],
 ];
 
 function limpiarCaja() {
