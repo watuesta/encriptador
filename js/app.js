@@ -1,8 +1,20 @@
 let mensaje = document.querySelector('#texto-sin-encriptar');
 let mensaje_encriptado = document.querySelector('#texto-encriptado');
+let imgSearch = document.querySelector('.imagen-muneco');
+let parrafoError = document.querySelector( '.parrafo');
 
 function limpiarCaja() {
     document.querySelector('#texto-sin-encriptar').value = '';
+}
+
+function mostrarError() {
+    imgSearch.setAttribute("style","display:block;");
+    parrafoError.setAttribute("style","display:block;");
+}
+
+function ocultarError(){
+    imgSearch.setAttribute("style","display:none;");
+    parrafoError.setAttribute("style","display:none;");   
 }
 
 let matriz_clave = [
@@ -24,8 +36,13 @@ function encriptar(frase) {
 
 function btnEncriptar(){
     let texto = mensaje.value;
-    mensaje_encriptado.innerHTML = encriptar(texto.toLowerCase());
-    limpiarCaja();
+    if (texto.length == 0) {
+        mostrarError();
+    }else{
+        ocultarError();
+        mensaje_encriptado.innerHTML = encriptar(texto.toLowerCase());
+        limpiarCaja();
+    }
 }
 
 function desencriptar(frase) {
@@ -39,6 +56,11 @@ function desencriptar(frase) {
 
 function btnDesencriptar(){
     let texto = mensaje.value;
-    mensaje_encriptado.innerHTML = desencriptar(texto.toLowerCase());
-    limpiarCaja();
+    if (texto.length == 0) {
+        mostrarError();
+    }else{
+        ocultarError();
+        mensaje_encriptado.innerHTML = desencriptar(texto.toLowerCase());
+        limpiarCaja();
+    }
 }
