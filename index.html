@@ -20,7 +20,7 @@
 
         <section class="principal">
             <div class="texto">
-                <textarea id="texto-encriptado" cols="80" rows="22" placeholder="Ingrese texto aquí"></textarea>
+                <textarea id="texto-sin-encriptar" cols="80" rows="22" placeholder="Ingrese texto aquí"></textarea>
             </div>
             <label for=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_2_231)">
@@ -31,17 +31,16 @@
                 <rect width="16" height="16" fill="white"/>
                 </clipPath>
                 </defs>
-                </svg>
-                 Solo letras minúsculas y sin acentos</label>
+                </svg>Solo letras minúsculas y sin acentos</label>
             <div class="botones">
                 <button class="boton-encriptar" onclick="btnEncriptar()">Encriptar</button>
-                <button class="boton-desencriptar">Desencriptar</button>
+                <button class="boton-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
             </div>
         </section>
 
         <section class="derecha">
             <div class="resultado">
-                <textarea name="" id="" cols="22" rows="10"></textarea>
+                <textarea id="texto-encriptado" cols="22" rows="10"></textarea>
             </div>
             <div class="imagen-muneco">
                 <img src="img/muneco.png" alt="">
