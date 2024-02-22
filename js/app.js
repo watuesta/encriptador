@@ -3,6 +3,14 @@ let mensaje_encriptado = document.querySelector('#texto-encriptado');
 let imgSearch = document.querySelector('.imagen-muneco');
 let parrafoError = document.querySelector( '.parrafo');
 
+let matriz_clave = [
+    ["a", "#/("],
+    ["e", "?)|"],
+    ["i", "!¿¡"],
+    ["o", "@=+"],
+    ["u", "*%$"],
+];
+
 function limpiarCaja() {
     document.querySelector('#texto-sin-encriptar').value = '';
 }
@@ -17,13 +25,34 @@ function ocultarError(){
     parrafoError.setAttribute("style","display:none;");   
 }
 
-let matriz_clave = [
-    ["a", "#/("],
-    ["e", "?)|"],
-    ["i", "!¿¡"],
-    ["o", "@=&"],
-    ["u", "*%$"],
-];
+function mostrarResultado() {
+    let btnCopiar = document.getElementById('btn-copiar');
+    btnCopiar.setAttribute("style","display:block;");
+    let txtCajaEncriptado = document.getElementById('texto-encriptado');
+    txtCajaEncriptado.setAttribute("style","display:block;");
+}
+
+function ocultarBotonCopiar() {
+    let btnCopiar = document.getElementById('btn-copiar');
+    btnCopiar.setAttribute("style","display:none;");
+}
+
+function ocultarCajaResultado() {
+    let txtCajaEncriptado = document.getElementById('texto-encriptado');
+    txtCajaEncriptado.setAttribute("style","display:none;");
+}
+
+function btnCopiarResultado() {
+    let texto = document.getElementById('texto-encriptado').innerHTML;
+    navigator.clipboard.writeText(texto)
+        .then(() => {
+        console.log('Contenido copiado al portapapeles');
+        /* Resuelto - texto copiado al portapapeles con éxito */
+        },() => {
+        console.error('Error al copiar');
+        /* Rechazado - fallo al copiar el texto al portapapeles */
+        });
+}
 
 function encriptar(frase) {
     for (let i = 0; i < matriz_clave.length; i++) {
@@ -37,11 +66,14 @@ function encriptar(frase) {
 function btnEncriptar(){
     let texto = mensaje.value;
     if (texto.length == 0) {
+        ocultarCajaResultado();
+        ocultarBotonCopiar();
         mostrarError();
     }else{
         ocultarError();
         mensaje_encriptado.innerHTML = encriptar(texto.toLowerCase());
         limpiarCaja();
+        mostrarResultado();
     }
 }
 
@@ -57,10 +89,13 @@ function desencriptar(frase) {
 function btnDesencriptar(){
     let texto = mensaje.value;
     if (texto.length == 0) {
+        ocultarCajaResultado();
+        ocultarBotonCopiar();
         mostrarError();
     }else{
         ocultarError();
         mensaje_encriptado.innerHTML = desencriptar(texto.toLowerCase());
         limpiarCaja();
+        mostrarResultado();
     }
 }

@@ -30,7 +30,9 @@ body{
 
 .resultado{
     margin: 0 auto;
-    margin-top: -130% !important;
+    display: flex;
+    flex-direction: column;
+    vertical-align: bottom;
 }
 .resultado textarea{
     font-family: "Inter", sans-serif;
@@ -155,3 +157,7 @@ body{
     cursor: pointer;
 }
 
+.resultado button{
+    width: 90% !important;
+    display: none;
+}
