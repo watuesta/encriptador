@@ -33,6 +33,7 @@ body{
     display: flex;
     flex-direction: column;
     vertical-align: bottom;
+    width: 100%;
 }
 .resultado textarea{
     font-family: "Inter", sans-serif;
@@ -44,6 +45,7 @@ body{
     background: none;
     padding: 0.3em;
     height: auto;
+    width: auto;
 }
 
 .imagen-muneco{
@@ -98,7 +100,7 @@ body{
 
 .texto{
     height: auto;
-    width: auto;
+    width: 100%;
 }
 
 .texto textarea{
@@ -111,6 +113,7 @@ body{
     background: none;
     padding: 0.3em;
     height: auto; 
+    width: 100%;
 }
 
 .texto textarea::placeholder{
