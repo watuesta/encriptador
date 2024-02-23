@@ -165,13 +165,17 @@ body{
     display: none;
 }
 /* Medias querys */
-@media (max-width: 768px){
+
+@media (max-width: 1027px){
+    header{
+        width: 100%;
+    }
     .principal{
         display: flex;
-        width: auto;
+        width: 100%;
         height: auto;
-        padding: 0;
-        margin: 0 auto;
+        margin: 0;
+        padding: 1em;
         justify-content: center;
     }
     .contenedor-logo{
@@ -182,28 +186,37 @@ body{
         margin: 0;
     }
     .texto textarea{
-        width: 342px;
+        margin: 0;
+        width: 100%;
         height: 200px;
     }
 
     .botones{
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        justify-content: space-between;
     }
     .derecha{
         display: block!important;
         height: auto!important;
-        width: 400px;
-
+        width: 100%!important;
     }
 
     main{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: flex-start;
     }
     .contenedor-logo{
         position: inherit;
         display: inline-block;
+    }
+}
+
+@media (max-width: 768px){
+    .botones{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
     }
 }
