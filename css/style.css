@@ -161,3 +161,46 @@ body{
     width: 90% !important;
     display: none;
 }
+/* Medias querys */
+@media (max-width: 768px){
+    .principal{
+        display: flex;
+        width: auto;
+        height: auto;
+        padding: 0;
+        padding-left: 1em;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    .contenedor-logo{
+        display: inline-block;
+    }
+    header{
+        padding-bottom: 3em;
+    }
+    .texto{
+        padding: 0;
+        margin: 0;
+    }
+    .texto textarea{
+        width: 342px;
+        height: 200px;
+    }
+
+    .botones{
+        flex-direction: column;
+        align-items: center;
+    }
+    .derecha{
+        display: block!important;
+        height: auto!important;
+        width: 400px;
+
+    }
+
+    main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
