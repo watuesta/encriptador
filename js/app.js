@@ -9,6 +9,7 @@ let matriz_clave = [
     ["a", "ai"],
     ["o", "ober"],
     ["u", "ufat"],
+    
 ];
 
 function limpiarCaja() {
@@ -78,11 +79,14 @@ function btnEncriptar(){
 }
 
 function desencriptar(frase) {
+    matriz_clave.reverse();
     for (let i = 0; i < matriz_clave.length; i++) {
         if (frase.includes(matriz_clave[i][1])) {
             frase = frase.replaceAll(matriz_clave[i][1], matriz_clave[i][0]);
+            console.log(frase);
         }
     }
+    matriz_clave.reverse();
     return frase;
 }
 
