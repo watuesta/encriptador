@@ -70,11 +70,18 @@ function btnEncriptar(){
         ocultarCajaResultado();
         ocultarBotonCopiar();
         mostrarError();
+        swal({
+            title: "Error!",
+            text: "Debes ingresar el texto a encriptar",
+            icon: "error",
+            button: "Volver a intentar"
+          });
     }else{
         ocultarError();
         mensaje_encriptado.innerHTML = encriptar(texto.toLowerCase());
         limpiarCaja();
         mostrarResultado();
+        swal("Encriptación correcta", "Tu texto ha sido encriptado correctamente", "success");
     }
 }
 
@@ -96,10 +103,17 @@ function btnDesencriptar(){
         ocultarCajaResultado();
         ocultarBotonCopiar();
         mostrarError();
+        swal({
+            title: "Error!",
+            text: "Debes ingresar el texto a desencriptar",
+            icon: "error",
+            button: "Volver a intentar"
+          });
     }else{
         ocultarError();
         mensaje_encriptado.innerHTML = desencriptar(texto.toLowerCase());
         limpiarCaja();
         mostrarResultado();
+        swal("Desencriptación correcta", "Tu texto ha sido desencriptado correctamente", "success");
     }
 }
