@@ -117,3 +117,10 @@ function btnDesencriptar(){
         swal("Desencriptación correcta", "Tu texto ha sido desencriptado correctamente", "success");
     }
 }
+
+function autoLower(e) {
+    let tecla = e.value;
+    let teclaLower = tecla.toLowerCase();
+
+    return document.querySelector('#texto-sin-encriptar').value = teclaLower;
+}
