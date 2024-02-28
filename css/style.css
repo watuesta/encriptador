@@ -45,6 +45,7 @@ body{
     height: 100%;
     width: 82%;
     padding: 1em;
+    padding-bottom: 78%;
 }
 
 .imagen-muneco{
@@ -211,6 +212,16 @@ body{
     .contenedor-logo{
         position: inherit;
         display: inline-block;
+    }
+    .resultado{
+        width: 100%;
+    }
+    .resultado textarea{
+        padding-bottom: 0;
+        width: auto;
+    }
+    .resultado button{
+        width: 96%!important;
     }
 }
 
