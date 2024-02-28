@@ -235,4 +235,7 @@ body{
         height: 100%!important;
         width: 100%!important;
     }
+    .resultado button{
+        width: 91%!important;
+    }
 }
